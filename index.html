@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>岩洞生存服</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 48px;
+    font-family: "Courier New", Consolas, monospace;
+    color: #1a1a1a;
+  }
+
+  .island-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .side-line {
+    flex: 1;
+    height: 4px;
+    background: #ffffff;
+  }
+
+  .island-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin: 0 16px;
+  }
+
+  .dynamic-island {
+    width: 190px;
+    height: 50px;
+    background: #000;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                height 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                border-radius 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    outline: 1px solid #1f1f22;
+    white-space: nowrap;
+  }
+
+  .dynamic-island:hover {
+    width: 540px;
+    height: 64px;
+    border-radius: 32px;
+  }
+
+  .island-title {
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #e8e8e8;
+    user-select: none;
+    position: absolute;
+    transition: opacity 0.2s ease;
+  }
+
+  .dynamic-island:hover .island-title {
+    opacity: 0;
+  }
+
+  .island-detail {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.28s ease 0.08s, transform 0.28s ease 0.08s;
+    user-select: none;
+    font-size: 15px;
+    color: #d8d8dc;
+  }
+
+  .dynamic-island:hover .island-detail {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4caf6d;
+    flex-shrink: 0;
+  }
+
+  .dot.end {
+    background: #4caf6d;
+  }
+
+  .server-name {
+    color: #f2f2f2;
+    letter-spacing: 0.5px;
+  }
+
+  .divider {
+    color: #4a4a4f;
+    font-size: 14px;
+  }
+
+  .address {
+    color: #9a9aa0;
+    font-size: 14px;
+  }
+
+  .status {
+    color: #7fbf8f;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+
+  .typewriter {
+    margin-top: 140px;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    white-space: nowrap;
+    user-select: none;
+  }
+
+  .server-info {
+    margin-top: 32px;
+    width: 900px;
+    border: 1px solid #ffffff;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    user-select: none;
+  }
+
+  .server-info .info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #ffffff;
+  }
+
+  .logo-box {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .logo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .content-box {
+    margin-top: 32px;
+    width: 900px;
+    height: 420px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-box {
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    border: 1px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .image-box img {
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    object-fit: cover;
+    display: block;
+  }
+
+  .image-box .caption {
+    flex-shrink: 0;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    user-select: none;
+  }
+</style>
+</head>
+<body>
+
+  <div class="island-row">
+    <span class="side-line"></span>
+    <div class="island-wrap">
+      <div class="dynamic-island">
+        <span class="island-title">岩洞生存服</span>
+        <div class="island-detail">
+          <span class="dot"></span>
+          <span class="server-name">岩洞生存服</span>
+          <span class="divider">|</span>
+          <span class="address">fun.mc.city</span>
+          <span class="status">online</span>
+          <span class="dot end"></span>
+        </div>
+      </div>
+    </div>
+    <span class="side-line"></span>
+  </div>
+
+  <div class="typewriter" id="typewriter"></div>
+
+  <div class="server-info">
+    <div class="info-text">
+      <span>服务器IP：fun.mc.city</span>
+      <span>24小时在线</span>
+      <span>当前状态：在线</span>
+    </div>
+    <div class="logo-box">
+      <img src="logo.png" alt="">
+    </div>
+  </div>
+
+  <div class="content-box">
+    <div class="image-box">
+      <img src="play.png" alt="">
+      <span class="caption">在这里有友好的玩家</span>
+    </div>
+  </div>
+
+  <div class="content-box">
+    <div class="image-box">
+      <img src="play1.png" alt="">
+      <span class="caption">拥有好的领地插件</span>
+    </div>
+  </div>
+
+  <script>
+    const lines = [
+      "在岩洞深处，建造属于你的家园",
+      "一个温馨的生存服务器，欢迎每一个冒险者",
+      "从洞穴出发，探索无限可能"
+    ];
+
+    const el = document.getElementById("typewriter");
+
+    const TYPE_SPEED = 90;
+    const DELETE_SPEED = 45;
+    const HOLD_TIME = 2000;
+
+    let lineIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function tick() {
+      const currentLine = lines[lineIndex];
+
+      if (!isDeleting) {
+        charIndex++;
+        el.textContent = currentLine.slice(0, charIndex);
+
+        if (charIndex === currentLine.length) {
+          isDeleting = true;
+          setTimeout(tick, HOLD_TIME);
+          return;
+        }
+
+        setTimeout(tick, TYPE_SPEED);
+      } else {
+        charIndex--;
+        el.textContent = currentLine.slice(0, charIndex);
+
+        if (charIndex === 0) {
+          isDeleting = false;
+          lineIndex = (lineIndex + 1) % lines.length;
+          setTimeout(tick, TYPE_SPEED);
+          return;
+        }
+
+        setTimeout(tick, DELETE_SPEED);
+      }
+    }
+
+    tick();
+  </script>
+
+</body>
+</html>
