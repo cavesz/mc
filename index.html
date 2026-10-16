@@ -11,11 +11,12 @@
     box-sizing: border-box;
   }
 
-  html, body {
+  html {
     height: 100%;
   }
 
   body {
+    min-height: 100%;
     background: rgba(26, 26, 26, 0.6);
     border: 1px solid #ffffff;
     display: flex;
@@ -23,6 +24,7 @@
     justify-content: flex-start;
     align-items: center;
     padding-top: 48px;
+    padding-bottom: 48px;
     font-family: "Courier New", Consolas, monospace;
     color: #1a1a1a;
   }
@@ -138,10 +140,13 @@
 
   .typewriter {
     margin-top: 140px;
+    width: 900px;
+    height: 34px;
     font-size: 28px;
     letter-spacing: 1px;
     color: #ffffff;
     white-space: nowrap;
+    text-align: center;
     user-select: none;
   }
 
@@ -164,6 +169,23 @@
     font-size: 16px;
     letter-spacing: 1px;
     color: #ffffff;
+  }
+
+  .copy-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    width: fit-content;
+  }
+
+  .copy-tip {
+    padding: 3px 8px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    white-space: nowrap;
   }
 
   .logo-box {
@@ -221,6 +243,113 @@
     color: #ffffff;
     user-select: none;
   }
+
+  .contact-box {
+    margin-top: 32px;
+    width: 900px;
+    border: 1px solid #ffffff;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    user-select: none;
+  }
+
+  .contact-box .contact-title {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .contact-box .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #ffffff;
+  }
+
+  .contact-box .contact-label {
+    color: #9a9aa0;
+    flex-shrink: 0;
+  }
+
+  .contact-box a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .contact-box a:hover {
+    text-decoration: underline;
+  }
+
+  .contact-copy {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    width: fit-content;
+  }
+
+  .contact-tip {
+    padding: 3px 8px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+
+  .eula-box {
+    margin-top: 32px;
+    width: 900px;
+    border: 1px solid #ffffff;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    user-select: none;
+  }
+
+  .eula-box .eula-title {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .eula-box .eula-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .eula-box .eula-heading {
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #ffffff;
+  }
+
+  .eula-box .eula-text {
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    color: #c8c8cc;
+  }
+
+  .footer {
+    margin-top: 48px;
+    width: 900px;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #9a9aa0;
+    user-select: none;
+  }
 </style>
 </head>
 <body>
@@ -247,7 +376,10 @@
 
   <div class="server-info">
     <div class="info-text">
-      <span>服务器IP：fun.mc.city</span>
+      <div class="copy-row" id="copyRow">
+        <span>服务器IP：fun.mc.city</span>
+        <span class="copy-tip" id="copyTip">可以用鼠标点击复制</span>
+      </div>
       <span>24小时在线</span>
       <span>当前状态：在线</span>
     </div>
@@ -268,6 +400,78 @@
       <img src="play1.png" alt="">
       <span class="caption">拥有好的领地插件</span>
     </div>
+  </div>
+
+  <div class="content-box">
+    <div class="image-box">
+      <img src="play2.png" alt="">
+      <span class="caption">拥有好的管理员</span>
+    </div>
+  </div>
+
+  <div class="contact-box">
+    <div class="contact-title">举报 & 联系我们</div>
+
+    <div class="contact-row">
+      <span class="contact-label">邮箱：</span>
+      <a href="mailto:cavesz@163.com">cavesz@163.com</a>
+    </div>
+
+    <div class="contact-row">
+      <span class="contact-label">电话：</span>
+      <a href="tel:18850775070">18850775070</a>
+    </div>
+
+    <div class="contact-row">
+      <span class="contact-label">QQ群：</span>
+      <div class="contact-copy" id="qqCopy">
+        <span>1020197400</span>
+        <span class="contact-tip" id="qqTip">点击复制群号</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="eula-box">
+    <div class="eula-title">用户许可协议（EULA）</div>
+
+    <div class="eula-section">
+      <div class="eula-heading">一、协议范围</div>
+      <div class="eula-text">本协议适用于所有访问、加入或使用岩洞生存服（以下简称“本服务器”）的玩家。进入本服务器即视为您已阅读、理解并同意本协议全部内容。</div>
+    </div>
+
+    <div class="eula-section">
+      <div class="eula-heading">二、账号与行为规范</div>
+      <div class="eula-text">1. 玩家须对自己账号下的一切行为负责。<br>2. 禁止使用任何作弊、外挂、自动化脚本或未经许可的第三方程序。<br>3. 禁止利用服务器漏洞、复制物品、刷取资源或干扰服务器正常运行。<br>4. 禁止辱骂、骚扰、歧视、威胁其他玩家或管理员。<br>5. 禁止在服务器内发布违法、色情、暴力或其他不当内容。<br>6. 禁止未经许可宣传其他服务器、群组或商业内容。</div>
+    </div>
+
+    <div class="eula-section">
+      <div class="eula-heading">三、建造与领地</div>
+      <div class="eula-text">1. 玩家在服务器内的建造、领地与物品归属以服务器规则和管理员判定为准。<br>2. 禁止恶意破坏他人建筑、领地或物品。<br>3. 禁止利用领地插件漏洞占用、圈占或干扰他人正常游戏。</div>
+    </div>
+
+    <div class="eula-section">
+      <div class="eula-heading">四、管理员权限</div>
+      <div class="eula-text">1. 管理员有权对违规行为进行警告、禁言、封禁、回滚数据等处理。<br>2. 管理员有权在不事先通知的情况下维护、调整或重置服务器内容。<br>3. 管理员处理结果以服务器最终判定为准。</div>
+    </div>
+
+    <div class="eula-section">
+      <div class="eula-heading">五、免责声明</div>
+      <div class="eula-text">1. 本服务器为爱好者自建服务器，与 Mojang、Microsoft 及其关联公司没有任何关系。<br>2. 本服务器不对因网络、硬件、软件故障或不可抗力导致的数据丢失、服务中断承担责任。<br>3. 玩家在服务器内的行为由玩家自行负责，本服务器不承担由此产生的任何法律责任。</div>
+    </div>
+
+    <div class="eula-section">
+      <div class="eula-heading">六、协议变更</div>
+      <div class="eula-text">本服务器有权随时修改本协议，修改后的协议自公布之日起生效。玩家继续使用本服务器即视为接受修改后的协议。</div>
+    </div>
+
+    <div class="eula-section">
+      <div class="eula-heading">七、联系方式</div>
+      <div class="eula-text">如对本协议有疑问，或需举报违规行为，请通过上方“举报 & 联系我们”板块中的邮箱、电话或 QQ 群与我们联系。</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    @2018 岩洞生存服 和 Mojang 和 Microsoft 没有任何关系
   </div>
 
   <script>
@@ -317,6 +521,60 @@
     }
 
     tick();
+
+    const copyRow = document.getElementById("copyRow");
+    const copyTip = document.getElementById("copyTip");
+    const DEFAULT_TIP = "可以用鼠标点击复制";
+    let tipTimer = null;
+
+    copyRow.addEventListener("click", function () {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText("fun.mc.city").then(function () {
+          showTip("已复制到剪贴板");
+        }).catch(function () {
+          showTip("复制失败");
+        });
+      } else {
+        showTip("当前环境不支持复制");
+      }
+    });
+
+    function showTip(text) {
+      copyTip.textContent = text;
+      if (tipTimer) {
+        clearTimeout(tipTimer);
+      }
+      tipTimer = setTimeout(function () {
+        copyTip.textContent = DEFAULT_TIP;
+      }, 1200);
+    }
+
+    const qqCopy = document.getElementById("qqCopy");
+    const qqTip = document.getElementById("qqTip");
+    const QQ_DEFAULT_TIP = "点击复制群号";
+    let qqTimer = null;
+
+    qqCopy.addEventListener("click", function () {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText("1020197400").then(function () {
+          showQqTip("已复制到剪贴板");
+        }).catch(function () {
+          showQqTip("复制失败");
+        });
+      } else {
+        showQqTip("当前环境不支持复制");
+      }
+    });
+
+    function showQqTip(text) {
+      qqTip.textContent = text;
+      if (qqTimer) {
+        clearTimeout(qqTimer);
+      }
+      qqTimer = setTimeout(function () {
+        qqTip.textContent = QQ_DEFAULT_TIP;
+      }, 1200);
+    }
   </script>
 
 </body>
