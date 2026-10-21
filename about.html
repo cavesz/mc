@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关于 - 岩洞生存服</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    height: 100%;
+  }
+
+  body {
+    min-height: 100%;
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 48px;
+    font-family: "Courier New", Consolas, monospace;
+    color: #1a1a1a;
+  }
+
+  .top-banner {
+    width: 900px;
+    height: 60px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    user-select: none;
+  }
+
+  .top-banner .nav-item {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .top-banner .nav-item:hover {
+    text-decoration: underline;
+  }
+
+  .top-banner .nav-item.active {
+    text-decoration: underline;
+  }
+
+  .page-title {
+    margin-top: 48px;
+    width: 900px;
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-align: center;
+    user-select: none;
+  }
+
+  .about-box {
+    margin-top: 32px;
+    width: 900px;
+    border: 1px solid #ffffff;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    user-select: none;
+  }
+
+  .about-box .about-title {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .about-box .about-text {
+    font-size: 15px;
+    line-height: 1.9;
+    letter-spacing: 0.5px;
+    color: #c8c8cc;
+  }
+
+  .about-box ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .about-box li {
+    font-size: 15px;
+    line-height: 1.9;
+    letter-spacing: 0.5px;
+    color: #c8c8cc;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .about-box li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+  }
+
+  .footer {
+    margin-top: 48px;
+    width: 900px;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #9a9aa0;
+    user-select: none;
+  }
+</style>
+</head>
+<body>
+
+  <div class="top-banner">
+    <a class="nav-item" href="index.html">首页</a>
+    <a class="nav-item" href="Introduction.html">介绍</a>
+    <a class="nav-item" href="report.html">举报</a>
+    <a class="nav-item active" href="about.html">关于</a>
+    <a class="nav-item" href="eula.html">规则</a>
+  </div>
+
+  <div class="page-title">关于岩洞生存服</div>
+
+  <div class="about-box">
+    <div class="about-title">我们是谁</div>
+    <div class="about-text">岩洞生存服是一个从 2018 年开始运营的 Minecraft 生存服务器，由一群喜欢这款游戏的玩家一起维护。我们不追求短期热度，更希望它成为一个能长期待下去的地方，让每一位进入服务器的人都能找到属于自己的节奏。</div>
+  </div>
+
+  <div class="about-box">
+    <div class="about-title">我们想做成什么样</div>
+    <div class="about-text">我们不打算堆砌花哨的玩法和复杂的系统，重点放在三件事上：稳定、公平、友好。服务器能稳定在线，规则对所有人一视同仁，玩家之间能友好相处。只要这三点守住了，剩下的就交给玩家自己去建造和探索。</div>
+  </div>
+
+  <div class="about-box">
+    <div class="about-title">服务器运营方式</div>
+    <div class="about-text">岩洞生存服是爱好者自建的非商业服务器，依靠管理团队和玩家社区共同维护。我们不提供任何商业服务，也不与 Mojang、Microsoft 及其关联公司存在任何关系。服务器的维护、调整和规则更新，都以服务器公告和管理员判定为准。</div>
+  </div>
+
+  <div class="about-box">
+    <div class="about-title">管理团队</div>
+    <div class="about-text">管理团队负责服务器的日常维护、违规处理、玩家反馈回应和规则执行。我们不公开管理员的个人信息，所有事务都通过服务器内的渠道和上方联系方式处理。管理团队也会尽量保持处理过程透明，遇到争议以规则和证据为准。</div>
+  </div>
+
+  <div class="about-box">
+    <div class="about-title">玩家社区</div>
+    <ul>
+      <li>欢迎新玩家加入，遇到问题可以随时在群里提问</li>
+      <li>鼓励互助合作，一起建造、交易、探索</li>
+      <li>不欢迎小团体排挤、恶意挑事、破坏氛围的行为</li>
+      <li>社区氛围靠大家共同维护，不是靠管理员单方面管理</li>
+    </ul>
+  </div>
+
+  <div class="about-box">
+    <div class="about-title">服务器规则简述</div>
+    <div class="about-text">服务器有一套完整的用户许可协议，涵盖行为规范、建造与领地、管理员权限、免责声明等内容。详细条款请前往“规则”页面查看。进入服务器即视为您已阅读并同意该协议。</div>
+  </div>
+
+  <div class="about-box">
+    <div class="about-title">联系我们</div>
+    <div class="about-text">如果对服务器有任何疑问、建议，或者需要举报违规行为，可以通过“举报”页面中的邮箱、电话或 QQ 群与我们联系。我们会尽量及时回复，也请尽量把情况说清楚，方便我们核实处理。</div>
+  </div>
+
+  <div class="about-box">
+    <div class="about-title">致谢</div>
+    <div class="about-text">感谢一路以来支持岩洞生存服的每一位玩家，是你们的建造、探索和陪伴，让这个服务器一直走到今天。也欢迎新玩家加入，希望你能在这里留下属于自己的故事。</div>
+  </div>
+
+  <div class="footer">
+    @2018 岩洞生存服 和 Mojang 和 Microsoft 没有任何关系
+  </div>
+
+</body>
+</html>

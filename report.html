@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>举报 - 岩洞生存服</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    height: 100%;
+  }
+
+  body {
+    min-height: 100%;
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 48px;
+    font-family: "Courier New", Consolas, monospace;
+    color: #1a1a1a;
+  }
+
+  .top-banner {
+    width: 900px;
+    height: 60px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    user-select: none;
+  }
+
+  .top-banner .nav-item {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .top-banner .nav-item:hover {
+    text-decoration: underline;
+  }
+
+  .top-banner .nav-item.active {
+    text-decoration: underline;
+  }
+
+  .page-title {
+    margin-top: 48px;
+    width: 900px;
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-align: center;
+    user-select: none;
+  }
+
+  .report-box {
+    margin-top: 32px;
+    width: 900px;
+    border: 1px solid #ffffff;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    user-select: none;
+  }
+
+  .report-box .report-title {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .report-box .report-text {
+    font-size: 15px;
+    line-height: 1.9;
+    letter-spacing: 0.5px;
+    color: #c8c8cc;
+  }
+
+  .report-box ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .report-box li {
+    font-size: 15px;
+    line-height: 1.9;
+    letter-spacing: 0.5px;
+    color: #c8c8cc;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .report-box li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+  }
+
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #ffffff;
+  }
+
+  .contact-label {
+    color: #9a9aa0;
+    flex-shrink: 0;
+  }
+
+  .contact-row a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .contact-row a:hover {
+    text-decoration: underline;
+  }
+
+  .contact-copy {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    width: fit-content;
+  }
+
+  .contact-tip {
+    padding: 3px 8px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+
+  .footer {
+    margin-top: 48px;
+    width: 900px;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #9a9aa0;
+    user-select: none;
+  }
+</style>
+</head>
+<body>
+
+  <div class="top-banner">
+    <a class="nav-item" href="index.html">首页</a>
+    <a class="nav-item" href="Introduction.html">介绍</a>
+    <a class="nav-item active" href="report.html">举报</a>
+    <a class="nav-item" href="about.html">关于</a>
+    <a class="nav-item" href="eula.html">规则</a>
+  </div>
+
+  <div class="page-title">举报违规</div>
+
+  <div class="report-box">
+    <div class="report-title">举报前请准备好这些信息</div>
+    <ul>
+      <li>发生的时间，尽量精确到日期和大致时间</li>
+      <li>涉及的玩家 ID 或昵称</li>
+      <li>具体发生了什么，简单说清楚经过</li>
+      <li>如果有截图、录屏或其他证据，请一并附上</li>
+      <li>你自己的游戏 ID，方便管理员联系你核实</li>
+    </ul>
+  </div>
+
+  <div class="report-box">
+    <div class="report-title">举报须知</div>
+    <div class="report-text">请尽量如实、完整地描述情况，不要夸大或隐瞒。管理员会根据你提供的信息进行核实，处理结果以服务器最终判定为准。恶意举报、捏造事实的行为同样会被处理。</div>
+  </div>
+
+  <div class="report-box">
+    <div class="report-title">联系方式</div>
+
+    <div class="contact-row">
+      <span class="contact-label">邮箱：</span>
+      <a href="mailto:cavesz@163.com">cavesz@163.com</a>
+    </div>
+
+    <div class="contact-row">
+      <span class="contact-label">电话：</span>
+      <a href="tel:18850775070">18850775070</a>
+    </div>
+
+    <div class="contact-row">
+      <span class="contact-label">QQ群：</span>
+      <div class="contact-copy" id="qqCopy">
+        <span>1020197400</span>
+        <span class="contact-tip" id="qqTip">点击复制群号</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    @2018 岩洞生存服 和 Mojang 和 Microsoft 没有任何关系
+  </div>
+
+  <script>
+    const qqCopy = document.getElementById("qqCopy");
+    const qqTip = document.getElementById("qqTip");
+    const QQ_DEFAULT_TIP = "点击复制群号";
+    let qqTimer = null;
+
+    qqCopy.addEventListener("click", function () {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText("1020197400").then(function () {
+          showQqTip("已复制到剪贴板");
+        }).catch(function () {
+          showQqTip("复制失败");
+        });
+      } else {
+        showQqTip("当前环境不支持复制");
+      }
+    });
+
+    function showQqTip(text) {
+      qqTip.textContent = text;
+      if (qqTimer) {
+        clearTimeout(qqTimer);
+      }
+      qqTimer = setTimeout(function () {
+        qqTip.textContent = QQ_DEFAULT_TIP;
+      }, 1200);
+    }
+  </script>
+
+</body>
+</html>

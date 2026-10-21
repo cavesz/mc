@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>介绍 - 岩洞生存服</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    height: 100%;
+  }
+
+  body {
+    min-height: 100%;
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 48px;
+    font-family: "Courier New", Consolas, monospace;
+    color: #1a1a1a;
+  }
+
+  .top-banner {
+    width: 900px;
+    height: 60px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    user-select: none;
+  }
+
+  .top-banner .nav-item {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .top-banner .nav-item:hover {
+    text-decoration: underline;
+  }
+
+  .top-banner .nav-item.active {
+    text-decoration: underline;
+  }
+
+  .page-title {
+    margin-top: 48px;
+    width: 900px;
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-align: center;
+    user-select: none;
+  }
+
+  .intro-box {
+    margin-top: 32px;
+    width: 900px;
+    border: 1px solid #ffffff;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    user-select: none;
+  }
+
+  .intro-box .intro-title {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .intro-box .intro-text {
+    font-size: 15px;
+    line-height: 1.9;
+    letter-spacing: 0.5px;
+    color: #c8c8cc;
+  }
+
+  .intro-box ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .intro-box li {
+    font-size: 15px;
+    line-height: 1.9;
+    letter-spacing: 0.5px;
+    color: #c8c8cc;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .intro-box li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+  }
+
+  .footer {
+    margin-top: 48px;
+    width: 900px;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #9a9aa0;
+    user-select: none;
+  }
+</style>
+</head>
+<body>
+
+  <div class="top-banner">
+    <a class="nav-item" href="index.html">首页</a>
+    <a class="nav-item active" href="Introduction.html">介绍</a>
+    <a class="nav-item" href="report.html">举报</a>
+    <a class="nav-item" href="about.html">关于</a>
+    <a class="nav-item" href="eula.html">规则</a>
+  </div>
+
+  <div class="page-title">岩洞生存服 介绍</div>
+
+  <div class="intro-box">
+    <div class="intro-title">服务器简介</div>
+    <div class="intro-text">岩洞生存服是一个以生存为核心、长期稳定运营的 Minecraft 服务器。我们希望在岩洞深处，为每一位冒险者提供一个可以安心建造、慢慢发展的家园。服务器自 2018 年开服至今，始终保持着友好的氛围和稳定的在线环境。</div>
+  </div>
+
+  <div class="intro-box">
+    <div class="intro-title">玩法特色</div>
+    <ul>
+      <li>原版生存体验，不添加影响平衡的模组</li>
+      <li>完善的领地保护系统，建造与物品安全有保障</li>
+      <li>24 小时在线，随时可以进入游戏</li>
+      <li>友好的玩家社区，欢迎新老玩家一起发展</li>
+      <li>认真负责的管理团队，及时处理违规与纠纷</li>
+    </ul>
+  </div>
+
+  <div class="intro-box">
+    <div class="intro-title">适合什么样的玩家</div>
+    <div class="intro-text">如果你喜欢慢慢建造自己的家园，喜欢和友好的玩家一起探索、交易、合作，又不想被外挂和恶意破坏打扰，那么岩洞生存服会是一个合适的选择。无论你是刚接触生存的新手，还是玩了很多年的老玩家，都可以在这里找到属于自己的节奏。</div>
+  </div>
+
+  <div class="footer">
+    @2018 岩洞生存服 和 Mojang 和 Microsoft 没有任何关系
+  </div>
+
+</body>
+</html>
