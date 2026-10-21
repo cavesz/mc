@@ -23,14 +23,42 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 48px;
+    padding-top: 24px;
     padding-bottom: 48px;
     font-family: "Courier New", Consolas, monospace;
     color: #1a1a1a;
   }
 
+  .top-banner {
+    width: 900px;
+    height: 60px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    user-select: none;
+  }
+
+  .top-banner .nav-item {
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .top-banner .nav-item:hover {
+    text-decoration: underline;
+  }
+
+  .top-banner .nav-item.active {
+    text-decoration: underline;
+  }
+
   .island-row {
     width: 100%;
+    margin-top: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -206,6 +234,145 @@
     display: block;
   }
 
+  .download-box {
+    margin-top: 32px;
+    width: 900px;
+    border: 1px solid #ffffff;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    user-select: none;
+  }
+
+  .download-box .download-title {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .download-desc {
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    color: #c8c8cc;
+  }
+
+  .download-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .download-btn {
+    height: 40px;
+    padding: 0 24px;
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-family: "Courier New", Consolas, monospace;
+    font-size: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    width: fit-content;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .download-btn:hover {
+    background: #ffffff;
+    color: #1a1a1a;
+  }
+
+  .query-box {
+    margin-top: 32px;
+    width: 900px;
+    border: 1px solid #ffffff;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    user-select: none;
+  }
+
+  .query-box .query-title {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .query-desc {
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    color: #c8c8cc;
+  }
+
+  .query-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .query-input {
+    flex: 1;
+    height: 40px;
+    padding: 0 12px;
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-family: "Courier New", Consolas, monospace;
+    font-size: 16px;
+    letter-spacing: 1px;
+    outline: none;
+  }
+
+  .query-input::placeholder {
+    color: #6b6b70;
+  }
+
+  .query-btn {
+    height: 40px;
+    padding: 0 24px;
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-family: "Courier New", Consolas, monospace;
+    font-size: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+
+  .query-btn:hover {
+    background: #ffffff;
+    color: #1a1a1a;
+  }
+
+  .query-result {
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 1px;
+    color: #ffffff;
+    min-height: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .query-result .result-line {
+    display: flex;
+  }
+
+  .query-result .result-label {
+    color: #9a9aa0;
+  }
+
   .content-box {
     margin-top: 32px;
     width: 900px;
@@ -354,6 +521,15 @@
 </head>
 <body>
 
+  <div class="top-banner">
+    <a class="nav-item active" href="index.html">首页</a>
+    <a class="nav-item" href="Introduction.html">介绍</a>
+    <a class="nav-item" href="search.html">查询</a>
+    <a class="nav-item" href="report.html">举报</a>
+    <a class="nav-item" href="about.html">关于</a>
+    <a class="nav-item" href="eula.html">规则</a>
+  </div>
+
   <div class="island-row">
     <span class="side-line"></span>
     <div class="island-wrap">
@@ -386,6 +562,25 @@
     <div class="logo-box">
       <img src="logo.png" alt="">
     </div>
+  </div>
+
+  <div class="download-box">
+    <div class="download-title">客户端下载</div>
+    <div class="download-desc">下载服务器客户端整合包，解压后按说明进入游戏即可。如果下载遇到问题，可以通过举报页的联系方式找我们。</div>
+    <div class="download-actions">
+      <a class="download-btn" href="download.zip" download>下载客户端</a>
+      <a class="download-btn" href="https://github.com/cavesz/mcver/releases/download/mc/MINECRAFT.7z" target="_blank" rel="noopener noreferrer">下载 MC 常用版本</a>
+    </div>
+  </div>
+
+  <div class="query-box">
+    <div class="query-title">玩家数据查询</div>
+    <div class="query-desc">输入完整的玩家 ID，点击查询或按回车，查看该玩家的身份信息。ID 区分大小写。</div>
+    <div class="query-row">
+      <input class="query-input" id="queryInput" type="text" placeholder="输入玩家 ID">
+      <button class="query-btn" id="queryBtn">查询</button>
+    </div>
+    <div class="query-result" id="queryResult"></div>
   </div>
 
   <div class="content-box">
@@ -575,6 +770,46 @@
         qqTip.textContent = QQ_DEFAULT_TIP;
       }, 1200);
     }
+
+    const PLAYER_DATA = {
+      "caves_z": { role: "管理员", jointime: "%jointime%", perm: "admin", bindQQ: "3380674043" },
+      "mooncake_409": { role: "管理员", jointime: "%jointime%", perm: "admin", bindQQ: "无" },
+      "WATZH": { role: "管理员", jointime: "%jointime%", perm: "admin", bindQQ: "无" },
+      "ganzi123_2": { role: "管理员", jointime: "%jointime%", perm: "admin", bindQQ: "无" },
+      "RX_qwq": { role: "VIP", jointime: "%jointime%", perm: "vip", bindQQ: "无" }
+    };
+
+    const DEFAULT_PLAYER = { role: "普通玩家", jointime: "%jointime%", perm: "default", bindQQ: "无" };
+
+    const queryInput = document.getElementById("queryInput");
+    const queryBtn = document.getElementById("queryBtn");
+    const queryResult = document.getElementById("queryResult");
+
+    function doQuery() {
+      const id = queryInput.value.trim();
+
+      if (id === "") {
+        queryResult.innerHTML = '<div class="result-line">请先输入玩家 ID</div>';
+        return;
+      }
+
+      const data = PLAYER_DATA.hasOwnProperty(id) ? PLAYER_DATA[id] : DEFAULT_PLAYER;
+
+      queryResult.innerHTML =
+        '<div class="result-line"><span class="result-label">玩家 ID：</span>' + id + '</div>' +
+        '<div class="result-line"><span class="result-label">身份：</span>' + data.role + '</div>' +
+        '<div class="result-line"><span class="result-label">入服时间：</span>' + data.jointime + '</div>' +
+        '<div class="result-line"><span class="result-label">权限位：</span>' + data.perm + '</div>' +
+        '<div class="result-line"><span class="result-label">绑定 QQ：</span>' + data.bindQQ + '</div>';
+    }
+
+    queryBtn.addEventListener("click", doQuery);
+
+    queryInput.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        doQuery();
+      }
+    });
   </script>
 
 </body>
